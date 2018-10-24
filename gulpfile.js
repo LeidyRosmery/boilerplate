@@ -89,7 +89,8 @@ gulp.task('img-watch',['img'], (done)=>{
 gulp.task('serve', ()=>{
 	browserSync.init({
 		server:{
-			baseDir: config.dist
+			baseDir: config.dist ,
+      directory: true
 		}
 	});
 
