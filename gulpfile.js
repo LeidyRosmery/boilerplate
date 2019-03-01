@@ -88,11 +88,14 @@ gulp.task('img-watch',['img'], (done)=>{
 
 gulp.task('serve', ()=>{
 	browserSync.init({
+     port: 80 ,
 		server:{
 			baseDir: config.dist ,
       directory: true
 		}
 	});
+
+
 
 	gulp.watch(sources.html, ['html-watch']);
 	gulp.watch(config.source+sources.sass, ['sass-watch']);
